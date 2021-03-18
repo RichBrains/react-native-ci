@@ -2,7 +2,7 @@ FROM openjdk:8
 LABEL MAINTAINER ANAM AHMED
 LABEL VERSION 0.4
 LABEL AUTHOR_EMAIL me@anam.co
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 RUN apt-get update && apt-get -y install nodejs unzip
 # ENV VARIABLES
 ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
