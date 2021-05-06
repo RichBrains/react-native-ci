@@ -3,7 +3,7 @@ LABEL MAINTAINER ANAM AHMED
 LABEL VERSION 0.4
 LABEL AUTHOR_EMAIL me@anam.co
 RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
-RUN apt-get update && apt-get -y install nodejs unzip
+RUN apt-get update && apt-get -y install nodejs unzip ruby-full
 # ENV VARIABLES
 ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
     ANDROID_HOME="/usr/local/android-sdk" \
@@ -33,6 +33,8 @@ RUN export PATH=$PATH:$ANDROID_HOME/emulator\
     && export PATH=$PATH:/opt/gradle/gradle-${GRADLE_VERSION}/bin\
     && export PATH=$PATH:/opt/maven/apache-maven-${MAVEN_VERSION}/bin\
     && echo PATH=$PATH:$ANDROID_HOME/platform-tools>>/etc/bash.bashrc
+
+RUN gem install bundler
 # INSTALL YARN, REACT NATIVE CLI, CREATE-REACT-NATIVE-APP
 RUN npm install -g yarn && yarn global add react-native-cli create-react-native-app expo-cli
 # VOLUMES
