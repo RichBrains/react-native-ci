@@ -2,6 +2,7 @@ FROM openjdk:8
 LABEL MAINTAINER ANAM AHMED
 LABEL VERSION 0.4
 LABEL AUTHOR_EMAIL me@anam.co
+RUN curl -sL https://sentry.io/get-cli/ | bash
 RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 RUN apt-get update && apt-get -y install nodejs unzip ruby-full make gcc g++
 # ENV VARIABLES
