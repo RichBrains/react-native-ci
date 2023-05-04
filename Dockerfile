@@ -37,7 +37,7 @@ RUN export PATH=$PATH:$ANDROID_HOME/emulator\
 # INSTALL BUNDLER GEM
 RUN gem install bundler
 # INSTALL YARN, REACT NATIVE CLI, CREATE-REACT-NATIVE-APP
-RUN npm install -g yarn && yarn global add react-native-cli create-react-native-app expo-cli
+RUN npm install -g yarn && yarn global add react-native-cli create-react-native-app
 # VOLUMES
 VOLUME ["/app","/root/.gradle"]
 # CHANGE WORKDIR
