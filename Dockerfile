@@ -7,7 +7,7 @@ RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 RUN apt-get update && apt-get -y install nodejs unzip ruby-full make gcc g++
 RUN apt-get update && apt-get install -y openjdk-11-jdk
 # ENV VARIABLES
-ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
+ENV SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip" \
     ANDROID_HOME="/usr/local/android-sdk" \
     ANDROID_VERSION=29\
     ANDROID_BUILD_TOOLS_VERSION=30.0.2\
