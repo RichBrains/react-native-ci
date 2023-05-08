@@ -1,10 +1,11 @@
-FROM openjdk:16-jdk-slim
+FROM openjdk:11
 LABEL MAINTAINER ANAM AHMED
 LABEL VERSION 0.4
 LABEL AUTHOR_EMAIL me@anam.co
 RUN curl -sL https://sentry.io/get-cli/ | bash
 RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 RUN apt-get update && apt-get -y install nodejs unzip ruby-full make gcc g++
+RUN apt-get update && apt-get install -y openjdk-11-jdk
 # ENV VARIABLES
 ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
     ANDROID_HOME="/usr/local/android-sdk" \
