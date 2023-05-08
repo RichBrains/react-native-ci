@@ -9,8 +9,8 @@ RUN apt-get update && apt-get -y install nodejs unzip ruby-full make gcc g++
 ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
     ANDROID_HOME="/usr/local/android-sdk" \
     ANDROID_VERSION=29\
-    ANDROID_BUILD_TOOLS_VERSION=29.0.2\
-    GRADLE_VERSION=6.7\
+    ANDROID_BUILD_TOOLS_VERSION=30.0.2\
+    GRADLE_VERSION=7.2.2\
     MAVEN_VERSION=3.6.3
 WORKDIR ${ANDROID_HOME}
 # GET SDK MANAGER
